@@ -1,2 +1,21 @@
-<h1>Landings#index</h1>
-<p>Find me in app/views/landings/index.html.erb</p>
+<h2><%= link_to "Create new Post!", new_post_path %></h2>
+
+<% if @posts.empty? %>
+  <br>No posts found! Feel free to create one!
+<% else %>
+  <h2>Posts</h2>
+  <table class="table">
+    <% @posts.each do |post| %>
+      <tr>
+        <td>
+        <%= link_to post.title, post_path(post) %> by <%= post.author %> on <%= I18n.t("date.abbr_month_names")[post.created_at.month] %> <%= post.created_at.mday %>, <%= post.created_at.year %>.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= link_to 'Delete',  post,  method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>

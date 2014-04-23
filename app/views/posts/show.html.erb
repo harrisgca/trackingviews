@@ -1,0 +1,10 @@
+<h3>Showing post made by <b><%= @post.author %>!</b></h3>
+
+<h4><b>Title: </b><em><%= @post.title %></em></h4>
+
+<h5><u>Body</u></h5>
+<%= @post.body %><br><br>
+
+<p>The Post has <strong><%= @postViews %> views</strong> and <strong><%= @postUniqueViews %> unique views!</strong></p>
+<br>
+<%= link_to 'Back', root_path %>
