@@ -1,28 +1,13 @@
-== README
+== Useage
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Clone the repo ( git clone https://github.com/stefioan/trackingviews.git )
 
-Things you may want to cover:
+* Input "bundle install" in terminal at the project's directory
 
-* Ruby version
+* Input "rake db:migrate"
 
-* System dependencies
+* Run the "rails server"
 
-* Configuration
+* Open your browser at http://localhost:3000
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Thank you for checking out this project!
